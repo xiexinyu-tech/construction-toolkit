@@ -1,10 +1,8 @@
 /*
-*³ÌÐò¹¦ÄÜ£ºÊÊÓÃÓÚ·Ç¶Ô³ÆÔ¤Ó¦Á¦²¼ÖÃË«¶ËÕÅÀ­£¬ÔÚ²ÎÊýÉèÖÃÇøÓòºÍÇø¶ÎÒªËØÉèÖÃÇøÓòÊäÈëÊý¾Ý£¬
-*×Ô¶¯¼ÆËã¸÷Çø¶Î¿ªÊ¼ºÍ½áÊøÕÅÀ­Á¦£¬Çø¶ÎÆ½¾ùÕÅÀ­Á¦£¬ÕÅÀ­Á¦Æ½ºâµãÎ»ÖÃ£¬µ¥¶ËÉì³¤Öµ¡£
-*×÷Õß£ºÐ»öÎÓî
-*¿ª·¢ÈÕÆÚ£º2020.11.23 
-ÈÕÖ¾£º
-2023.5.19²ÉÓÃGB2312±àÂë¸ñÊ½ÖØÐÂ±àÂëÒÔ½â¾öÖÐÎÄÂÒÂëÎÊÌâ¡£
+*ç¨‹åºåŠŸèƒ½ï¼šé€‚ç”¨äºŽéžå¯¹ç§°é¢„åº”åŠ›å¸ƒç½®åŒç«¯å¼ æ‹‰ï¼Œåœ¨å‚æ•°è®¾ç½®åŒºåŸŸå’ŒåŒºæ®µè¦ç´ è®¾ç½®åŒºåŸŸè¾“å…¥æ•°æ®ï¼Œ
+*è‡ªåŠ¨è®¡ç®—å„åŒºæ®µå¼€å§‹å’Œç»“æŸå¼ æ‹‰åŠ›ï¼ŒåŒºæ®µå¹³å‡å¼ æ‹‰åŠ›ï¼Œå¼ æ‹‰åŠ›å¹³è¡¡ç‚¹ä½ç½®ï¼Œå•ç«¯ä¼¸é•¿å€¼ã€‚
+*ä½œè€…ï¼šè°¢é‘«å®‡
+*å¼€å‘æ—¥æœŸï¼š2020.11.23 
 */
 
 #include <stdio.h>
@@ -12,30 +10,30 @@
 
 int main(){
 
-    //²ÎÊýÉèÖÃÇøÓò£º
-    //¸Ö½ÊÏßÇø¶Î±àºÅÓÐn¶Î
+    //å‚æ•°è®¾ç½®åŒºåŸŸï¼š
+    //é’¢ç»žçº¿åŒºæ®µç¼–å·æœ‰næ®µ
     int n=9;
-    //u£ºÔ¤Ó¦Á¦½îÓë¿×µÀ±ÚµÄÄ¦²ÁÏµÊý
+    //uï¼šé¢„åº”åŠ›ç­‹ä¸Žå­”é“å£çš„æ‘©æ“¦ç³»æ•°
     float u=0.17;
-    //k:¿×µÀÃ¿Ã×¾Ö²¿Æ«²î¶ÔÄ¦²ÁµÄÓ°ÏìÏµÊý
+    //k:å­”é“æ¯ç±³å±€éƒ¨åå·®å¯¹æ‘©æ“¦çš„å½±å“ç³»æ•°
     float k=0.0015;
-    //¸Ö½ÊÏßµ¯ÐÔÄ£Á¿£¨Mpa£©
+    //é’¢ç»žçº¿å¼¹æ€§æ¨¡é‡ï¼ˆMpaï¼‰
     float Ep=195000;
-    //¸Ö½ÊÏßÊø½ØÃæ»ý£¨mm^2£©
+    //é’¢ç»žçº¿æŸæˆªé¢ç§¯ï¼ˆmm^2ï¼‰
     float Ap=2363;
-    //ÕÅÀ­¿ØÖÆÓ¦Á¦£¨Mpa£©
+    //å¼ æ‹‰æŽ§åˆ¶åº”åŠ›ï¼ˆMpaï¼‰
     float Fc=1339.2;
-    //ÃªÏÂ¸Ö½ÊÏßÕÅÀ­Á¦£¨KN£©
+    //é”šä¸‹é’¢ç»žçº¿å¼ æ‹‰åŠ›ï¼ˆKNï¼‰
     float pss=Ap*Fc/1000;
 
-    //Çø¶ÎÒªËØÉèÖÃÇøÓò£º
-    //ÊäÈëÇø¶Î³¤¶È£¨m£©
+    //åŒºæ®µè¦ç´ è®¾ç½®åŒºåŸŸï¼š
+    //è¾“å…¥åŒºæ®µé•¿åº¦ï¼ˆmï¼‰
     float len[]={11.6725,0.7643,21.341,2.042,4.5612,2.042,12.7843,1.5732,1.1482};
-    //ÊäÈëÇø¶ÎÇúÏß¶Î»¡¶È£¨rad£©£¬Ö±Ïß¶ÎÊäÈë0
+    //è¾“å…¥åŒºæ®µæ›²çº¿æ®µå¼§åº¦ï¼ˆradï¼‰ï¼Œç›´çº¿æ®µè¾“å…¥0
     float angle1[]={0,0.095537,0,0.25525,0,0.25525,0,0.19665,0};
 
-    //Êý¾Ý¼ÆËãÇøÓò£º
-	//Çø¶Î½á¹¹ÉùÃ÷
+    //æ•°æ®è®¡ç®—åŒºåŸŸï¼š
+	//åŒºæ®µç»“æž„å£°æ˜Ž
     struct zone{
         double length;
         double angle;
@@ -43,10 +41,10 @@ int main(){
         float elong;
     };
 	
-    printf("×Ü¼ÆÓÐ%d¸öÇø¶Î£¬ÕýËã±àºÅ£º1~%d£¬·´Ëã±àºÅ£º%d~1\n",n,n,n);
-    //´´½¨ÕýËã½á¹¹Êý×é²¢¸³Öµ,¼ÆËã¸÷Çø¶ÎÕÅÀ­Á¦¡¢Éì³¤Á¿
-    printf("ÕýËãÊý¾Ý£º\n");
-	printf("Çø¶Î¿ªÊ¼ÕÅÀ­Á¦£¨KN£© Çø¶Î½áÊøÕÅÀ­Á¦£¨KN£© Çø¶ÎÆ½¾ùÕÅÀ­Á¦£¨KN£© Çø¶ÎÉì³¤Öµ£¨m£©\n");
+    printf("æ€»è®¡æœ‰%dä¸ªåŒºæ®µï¼Œæ­£ç®—ç¼–å·ï¼š1~%dï¼Œåç®—ç¼–å·ï¼š%d~1\n",n,n,n);
+    //åˆ›å»ºæ­£ç®—ç»“æž„æ•°ç»„å¹¶èµ‹å€¼,è®¡ç®—å„åŒºæ®µå¼ æ‹‰åŠ›ã€ä¼¸é•¿é‡
+    printf("æ­£ç®—æ•°æ®ï¼š\n");
+	printf("åŒºæ®µå¼€å§‹å¼ æ‹‰åŠ›ï¼ˆKNï¼‰ åŒºæ®µç»“æŸå¼ æ‹‰åŠ›ï¼ˆKNï¼‰ åŒºæ®µå¹³å‡å¼ æ‹‰åŠ›ï¼ˆKNï¼‰ åŒºæ®µä¼¸é•¿å€¼ï¼ˆmï¼‰\n");
     struct zone z[n];
     for (int i = 0; i < n; i++)
     {
@@ -68,9 +66,9 @@ int main(){
         printf(" %f %f\n",z[i].pp,z[i].elong);
     }
 
-	//´´½¨·´Ëã½á¹¹Êý×é²¢¸³Öµ,¼ÆËã¸÷Çø¶ÎÕÅÀ­Á¦¡¢Éì³¤Á¿
-    printf("·´ËãÊý¾Ý£º\n");
-	printf("Çø¶Î¿ªÊ¼ÕÅÀ­Á¦£¨KN£© Çø¶Î½áÊøÕÅÀ­Á¦£¨KN£© Çø¶ÎÆ½¾ùÕÅÀ­Á¦£¨KN£© Çø¶ÎÉì³¤Öµ£¨m£©\n");
+	//åˆ›å»ºåç®—ç»“æž„æ•°ç»„å¹¶èµ‹å€¼,è®¡ç®—å„åŒºæ®µå¼ æ‹‰åŠ›ã€ä¼¸é•¿é‡
+    printf("åç®—æ•°æ®ï¼š\n");
+	printf("åŒºæ®µå¼€å§‹å¼ æ‹‰åŠ›ï¼ˆKNï¼‰ åŒºæ®µç»“æŸå¼ æ‹‰åŠ›ï¼ˆKNï¼‰ åŒºæ®µå¹³å‡å¼ æ‹‰åŠ›ï¼ˆKNï¼‰ åŒºæ®µä¼¸é•¿å€¼ï¼ˆmï¼‰\n");
     struct zone z1[n];
     for (int j = n-1; j > -1; j--)
     {
@@ -92,38 +90,38 @@ int main(){
         printf(" %f %f\n",z1[j].pp,z1[j].elong);
     }
 
-	//Çó½âÕÅÀ­Á¦Æ½ºâµãÔÚÄÄ¸öÇø¶Î£¬¸Ãµã¾àÀë¸Ã¶ÎÕýËãÆðµã¶àÉÙm
+	//æ±‚è§£å¼ æ‹‰åŠ›å¹³è¡¡ç‚¹åœ¨å“ªä¸ªåŒºæ®µï¼Œè¯¥ç‚¹è·ç¦»è¯¥æ®µæ­£ç®—èµ·ç‚¹å¤šå°‘m
     double x; int n_ph;
     for(int l =0; l < n; l++){
 		if((z[l].ps-z1[l].pe)*(z[l].pe-z1[l].ps)<=0.0){
             n_ph=l;
-			printf("\nÕÅÀ­Á¦Æ½ºâµãÔÚµÚ%d¶Î",l+1);
+			printf("\nå¼ æ‹‰åŠ›å¹³è¡¡ç‚¹åœ¨ç¬¬%dæ®µ",l+1);
             double a=log(z[l].ps);
             double b=log(z1[l].ps);
             double c=k*z[l].length+u*z[l].angle;
             x=z[l].length*(a-b+c)/(2*c);
-            printf("\nÕÅÀ­Á¦Æ½ºâµã¾à¸Ã¶ÎÕýËãÆðµã%fm\n",x);
+            printf("\nå¼ æ‹‰åŠ›å¹³è¡¡ç‚¹è·è¯¥æ®µæ­£ç®—èµ·ç‚¹%fm\n",x);
 		}
 	}
 
-	//Çó½âµ¥¶ËÉì³¤Öµ
-	//ÕýËãµ¥¶ËÉì³¤Á¿
+	//æ±‚è§£å•ç«¯ä¼¸é•¿å€¼
+	//æ­£ç®—å•ç«¯ä¼¸é•¿é‡
 	float sum1=0,sum2=0;
 	for(int l =0; l < n_ph; l++){
         sum1=sum1+z[l].elong;
 	}
 	float pp1=z[n_ph].ps*(1-pow(2.7182,(-(k*x+u*(x/z[n_ph].length)*z[n_ph].angle))))/(k*x+u*(x/z[n_ph].length)*z[n_ph].angle);
     float elong1=pp1*x/(Ep*Ap)*1000;
-    printf("Õý¶ËÉì³¤Öµ£º%fm\n",(sum1+elong1));
+    printf("æ­£ç«¯ä¼¸é•¿å€¼ï¼š%fm\n",(sum1+elong1));
 
-    //·´Ëãµ¥¶ËÉì³¤Á¿
+    //åç®—å•ç«¯ä¼¸é•¿é‡
 	for(int l =n_ph+1; l < n; l++){
         sum2=sum2+z1[l].elong;
 	}
     float x2=z1[n_ph].length-x;
     float pp2=z1[n_ph].ps*(1-pow(2.7182,(-(k*x2+u*(x2/z1[n_ph].length)*z1[n_ph].angle))))/(k*x2+u*(x2/z1[n_ph].length)*z1[n_ph].angle);
     float elong2=pp2*x2/(Ep*Ap)*1000;
-    printf("·´¶ËÉì³¤Öµ£º%fm\n",(sum2+elong2));
+    printf("åç«¯ä¼¸é•¿å€¼ï¼š%fm\n",(sum2+elong2));
 
     return 0;
 }
